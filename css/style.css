@@ -1,0 +1,133 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 15px;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+body,
+button {
+	background-color: hsl(0, 0%, 95%);
+}
+
+h1 {
+	color: hsl(0, 0%, 95%);
+	font-family: "Big Shoulders Display", sans-serif;
+	font-size: 2.5rem;
+	letter-spacing: 1px;
+}
+
+.description,
+button {
+	font-family: "Lexend Deca", sans-serif;
+}
+
+button {
+	cursor: pointer;
+}
+
+section {
+	width: clamp(600px, 90%, 750px);
+	display: flex;
+}
+
+.sedans,
+.suvs,
+.luxury {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-basis: 33.3%;
+	padding: 2.2em min(4.7%, 2.2em);
+	height: 450px;
+}
+
+.description {
+	line-height: 1.4;
+	color: hsla(0, 0%, 100%, 0.75);
+}
+
+.btn-learn-more {
+	padding: 1em 2em;
+	border: none;
+	border-radius: 30px;
+}
+
+.sedans {
+	border-radius: 10px 0 0 10px;
+	background-color: hsl(31, 77%, 52%);
+}
+
+.suvs {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+	border-radius: 0 10px 10px 0;
+	background-color: hsl(179, 100%, 13%);
+}
+
+.sedans button {
+    color: hsl(31, 77%, 52%);
+}
+
+.sedans button:active {
+	background-color: hsl(31, 77%, 52%);
+	color: hsl(0, 0%, 95%);
+	border: 2px solid hsl(0, 0%, 95%);
+}
+
+.suvs button {
+    color: hsl(184, 100%, 22%);
+}
+
+.suvs button:active {
+    background-color: hsl(184, 100%, 22%);
+	color: hsl(0, 0%, 95%);
+	border: 2px solid hsl(0, 0%, 95%);
+}
+
+.luxury button {
+	color: hsl(179, 100%, 13%);
+}
+
+.luxury button:active {
+    background-color: hsl(179, 100%, 13%);
+	color: hsl(0, 0%, 95%);
+	border: 2px solid hsl(0, 0%, 95%);
+}
+
+@media (max-width: 569px) {
+	body {
+		padding: 50px 0;
+	}
+	section {
+        flex-direction: column;
+		width: clamp(300px, 85%, 420px);
+	}
+    
+	.sedans {
+        border-radius: 10px 10px 0 0;
+	}
+
+	.luxury {
+        border-radius: 0 0 10px 10px;
+	}
+    .sedans,
+    .suvs,
+    .luxury {
+        padding: 2.2em;
+        gap: 20px;
+    }
+}
